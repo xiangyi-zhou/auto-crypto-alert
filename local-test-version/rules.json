@@ -1,0 +1,23 @@
+{
+  "coinmarketcap_api_key": "YOUR CMC KEY",
+  "symbols": ["BTC", "ETH"],
+  "convert": "USDT",
+  "bark": {
+    "bark_api_key": "YOUR BARK KEY",
+    "server": "https://api.day.app",
+    "sound": "alarm.caf",
+    "level": "timeSensitive",
+    "group": "Crypto Alert",
+    "call": 1
+  },
+  "rules": {
+    "BTC": [
+      {"field": "price", "operator": ">=", "target": 120000},
+      {"field": "price", "operator": "<=", "target": 109407}
+    ],
+    "ETH": [
+      {"field": "price", "operator": ">=", "target": 4000},
+      {"field": "price", "operator": "<=", "target": 3500}
+    ]
+  }
+}
