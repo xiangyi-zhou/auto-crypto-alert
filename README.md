@@ -96,6 +96,22 @@ python main.py
 
 4. 部署到 Google Cloud
 
+- 上传 Cloud Function
+
+  - 打开 [Google Cloud Console](https://console.cloud.google.com/)
+
+  - 导航到 Functions → 创建函数 (Write a Function)
+  - 填写基本信息：
+
+        名称 (Function name)： crypto_alert
+        区域 (Region)： 选择你所在区域
+        触发器 (Trigger)： 选择 HTTP
+        允许未认证访问 ： 勾选
+        运行环境 (Runtime)： 选择 Python 3.10 以上
+
+  - 在内联编辑器 (Inline editor)上传或直接粘贴 `main.py`, `requirements.txt`, `rules.json`
+  - 设置函数入口点 (Function entry point)： crypto_alert
+
 ## 严正声明
 
 - 仅供技术交流学习，不构成任何投资建议，请自行判断风险 DO YOUR OWN RESEARCH!
