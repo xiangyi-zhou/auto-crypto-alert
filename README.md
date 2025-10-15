@@ -4,7 +4,7 @@
 ![Crypto](https://img.shields.io/badge/Crypto-Alert-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 
-作为散户韭菜和技术极客，尤其是经过 2025 年 10 月 11 日币圈的黑天鹅事件之后，你是否想要免费拥有自己的加密货币预警系统？
+作为币圈散户和技术极客，尤其是经过 2025 年 10 月 11 日币圈的黑天鹅事件之后，你是否想要免费拥有自己的加密货币预警系统？
 
 欢迎使用 Auto Crypto Alert ，这是一个基于 CoinMarketCap API 的加密货币价格自动提醒工具，通过 Bark App 推送到手机，音量堪比电话铃声，让你不会再在睡梦中错过行情 :)
 
@@ -68,7 +68,7 @@ python -m pip install -r requirements.txt
   - `sound`：提醒音
   - `level`：通知优先级（timeSensitive / critical / default）
   - `group`：分组名称
-- 价格规则：`field`:price，`operator`: >= 或 <=，`target` : 目标价格
+- 价格规则：`field`: price，`operator`: >= 或 <=，`target` : 目标价格
 - 监控币种：`symbols`
 - 转换币种：`convert`
 
@@ -96,21 +96,19 @@ python main.py
 
 4. 部署到 Google Cloud
 
-- 上传 Cloud Function
+- 打开 [Google Cloud Console](https://console.cloud.google.com/)
 
-  - 打开 [Google Cloud Console](https://console.cloud.google.com/)
+- 导航到 Functions → 创建函数 (Write a Function)
+- 填写基本信息：
 
-  - 导航到 Functions → 创建函数 (Write a Function)
-  - 填写基本信息：
+      名称 (Function name)： crypto_alert
+      区域 (Region)： 选择你所在区域
+      触发器 (Trigger)： 选择 HTTP
+      允许未认证访问 ： 勾选
+      运行环境 (Runtime)： 选择 Python 3.10 以上
 
-        名称 (Function name)： crypto_alert
-        区域 (Region)： 选择你所在区域
-        触发器 (Trigger)： 选择 HTTP
-        允许未认证访问 ： 勾选
-        运行环境 (Runtime)： 选择 Python 3.10 以上
-
-  - 在内联编辑器 (Inline editor)上传或直接粘贴 `main.py`, `requirements.txt`, `rules.json`
-  - 设置函数入口点 (Function entry point)： crypto_alert
+- 在内联编辑器 (Inline editor)上传或直接粘贴 `main.py`, `requirements.txt`, `rules.json`
+- 设置函数入口点 (Function entry point)：`crypto_alert`
 
 ## 严正声明
 
